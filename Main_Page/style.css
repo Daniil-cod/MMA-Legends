@@ -1,0 +1,149 @@
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: #EDE9E3;
+    color: #1D232B;
+    font: 17px/1.7 Arial, sans-serif;
+}
+
+header {
+    background: linear-gradient(#0A0F16AA, #0A0F16CC), url("../image/header-mma.jpg") center/cover;
+    min-height: 250px;
+    padding: 65px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: white;
+    font-size: 42px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header p { color: #EEE; }
+
+nav {
+    background: #A9202C;
+    padding: 17px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 28px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 5px;
+}
+
+nav a:hover, nav a.active {
+    color: #FFD9D9;
+    border-bottom: 2px solid white;
+}
+
+.layout-container {
+    max-width: 1300px;
+    margin: 40px auto;
+    padding: 0 25px;
+    display: grid;
+    grid-template-columns: minmax(0, 2.2fr) minmax(0, 1fr);
+    gap: 28px;
+    align-items: start;
+}
+
+main {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+section, article, aside {
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px #00000015;
+}
+
+section {
+    background: white;
+    border-top: 5px solid #C62828;
+}
+
+section h2 { color: #C62828; font-size: 30px; margin-top: 0; }
+section h3 { font-size: 22px; }
+section p, article p { margin-bottom: 17px; }
+
+article {
+    background: #1D232B;
+    color: white;
+    border-left: 5px solid #C62828;
+}
+
+article h3 { font-size: 26px; margin-top: 0; }
+article p { color: #E1E4E8; }
+
+.fighter-row {
+    display: grid;
+    grid-template-columns: 1.2fr 0.9fr;
+    align-items: center;
+    gap: 25px;
+}
+
+.fighter-photo {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    background: #1D232B;
+    border: none;
+    border-radius: 5px;
+}
+
+section .fighter-photo { background: #F5F5F5; }
+
+aside {
+    background: #F7F4ED;
+    border-top: 5px solid #C62828;
+}
+
+aside h3 { color: #C62828; font-size: 23px; margin-top: 0; }
+aside ul { list-style: none; padding: 0; }
+aside li { border-bottom: 1px solid #D4CEC7; padding: 10px 0; font-size: 16px; }
+
+footer {
+    background: #171C23;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    border-top: 4px solid #C62828;
+}
+
+footer p { margin: 0; font-size: 14px; }
+
+@media (max-width: 900px) {
+    .layout-container, .fighter-row { grid-template-columns: 1fr; }
+    .fighter-photo { height: 320px; }
+}
+
+@media (max-width: 600px) {
+    header { min-height: 210px; padding: 40px 15px; }
+    header h1 { font-size: 28px; }
+    nav ul { gap: 15px; }
+    nav a { font-size: 14px; }
+    section, article, aside { padding: 20px; }
+    section h2 { font-size: 25px; }
+    article h3 { font-size: 23px; }
+    .layout-container { margin: 25px auto; padding: 0 15px; }
+}
